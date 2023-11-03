@@ -3,10 +3,8 @@ name: Engrave Music
 on:
   push:
     branches: [ "main" ]
-    paths: '**.ly'
   pull_request:
     branches: [ "main" ]
-    paths: '**.ly'
 
 jobs:
   build:
