@@ -78,14 +78,12 @@ scoreAAltoSaxI = \relative c'' {
   \global
   \transposition es
   % Music follows here.
-  
 }
 
 scoreAAltoSaxII = \relative c'' {
   \global
   \transposition es
   % Music follows here.
-  
 }
 
 scoreABassClarinet = \relative c' {
@@ -104,14 +102,12 @@ scoreATrumpetBbI = \relative c'' {
   \global
   \transposition bes
   % Music follows here.
-  
 }
 
 scoreATrumpetBbII = \relative c'' {
   \global
   \transposition bes
   % Music follows here.
-  
 }
 
 scoreAHornFI = \relative c'' {
@@ -124,68 +120,57 @@ scoreAHornFII = \relative c'' {
   \global
   \transposition f
   % Music follows here.
-  
 }
 
 scoreATromboneI = \relative c {
   \global
   % Music follows here.
-  
 }
 
 scoreATromboneII = \relative c {
   \global
   % Music follows here.
-  
 }
 
 scoreAEuphoniumI = \relative c {
   \global
   % Music follows here.
-  
 }
 
 scoreAEuphoniumII = \relative c {
   \global
   % Music follows here.
-  
 }
 
 scoreATuba = \relative c'' {
   \global
   \transposition bes,
   % Music follows here.
-  
 }
 
 scoreATimpani = \relative c {
   \global
   % Music follows here.
-  
 }
 
 scoreAXylophone = \relative c'' {
   \global
   % Music follows here.
-  
 }
 
 scoreARight = \relative c'' {
   \global
   % Music follows here.
-  
 }
 
 scoreALeft = \relative c' {
   \global
   % Music follows here.
-  
 }
 
 scoreATubularBells = \relative c'' {
   \global
   % Music follows here.
-  
 }
 
 scoreAChordsPart = \new ChordNames \scoreAChordNames
