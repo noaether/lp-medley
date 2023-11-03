@@ -2,12 +2,17 @@
 
 \include "components/header.ly"
 
+%woodwinds
 \include "parts/flute.ly"
 \include "parts/oboe.ly"
 \include "parts/clarinet.ly"
 \include "parts/bassclarinet.ly"
 \include "parts/altosax.ly"
+
+%brass
 \include "parts/trumpet.ly"
+\include "parts/horn.ly"
+\include "parts/trombone.ly"
 
 \headerSnippet
 
@@ -122,25 +127,47 @@ scoreATrumpetBbII = \relative c' {
 }
 
 scoreAHornFI = \relative c'' {
-  \global
   \transposition f
-  % Music follows here.
+  \key f \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Adante"
+  \hornI_COTNT
+
+  \section
 }
 
 scoreAHornFII = \relative c'' {
-  \global
   \transposition f
-  % Music follows here.
+  \key f \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Adante"
+  \hornII_COTNT
+
+  \section
 }
 
 scoreATromboneI = \relative c {
-  \global
-  % Music follows here.
+  \transposition f
+  \clef bass \key f \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Adante"
+  \tromboneI_COTNT
+
+  \section
 }
 
 scoreATromboneII = \relative c {
-  \global
-  % Music follows here.
+  \transposition f
+  \clef bass \key f \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Adante"
+  \tromboneII_COTNT
+
+  \section
 }
 
 scoreAEuphoniumI = \relative c {
