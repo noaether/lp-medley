@@ -6,6 +6,8 @@
 \include "parts/oboe.ly"
 \include "parts/clarinet.ly"
 \include "parts/bassclarinet.ly"
+\include "parts/altosax.ly"
+\include "parts/trumpet.ly"
 
 \headerSnippet
 
@@ -75,16 +77,15 @@ scoreAClarinetII = \relative c'' {
   \section
 }
 
-scoreAAltoSaxI = \relative c'' {
-  \global
+scoreAAltoSax = \relative c'' {
   \transposition es
-  % Music follows here.
-}
+  \key g \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Adante"
+  \altoSax_COTNT
 
-scoreAAltoSaxII = \relative c'' {
-  \global
-  \transposition es
-  % Music follows here.
+  \section
 }
 
 scoreABassClarinet = \relative c' {
@@ -93,21 +94,31 @@ scoreABassClarinet = \relative c' {
   \numericTimeSignature
   \time 4/4
   \tempo "Adante"
-  \bassclar_COTNT
+  \bassClar_COTNT
 
   \section
 }
 
-scoreATrumpetBbI = \relative c'' {
-  \global
+scoreATrumpetBbI = \relative c' {
   \transposition bes
-  % Music follows here.
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Adante"
+  \trumpetI_COTNT
+
+  \section
 }
 
-scoreATrumpetBbII = \relative c'' {
-  \global
+scoreATrumpetBbII = \relative c' {
   \transposition bes
-  % Music follows here.
+  \key c \major
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Adante"
+  \trumpetII_COTNT
+
+  \section
 }
 
 scoreAHornFI = \relative c'' {
@@ -205,17 +216,11 @@ scoreAClarinetIIPart = \new Staff \with {
   midiInstrument = "clarinet"
 } \scoreAClarinetII
 
-scoreAAltoSaxIPart = \new Staff \with {
-  instrumentName = "Alto Sax I"
-  shortInstrumentName = "ASx. I"
+scoreAAltoSaxPart = \new Staff \with {
+  instrumentName = "Alto Sax"
+  shortInstrumentName = "ASx."
   midiInstrument = "alto sax"
-} \scoreAAltoSaxI
-
-scoreAAltoSaxIIPart = \new Staff \with {
-  instrumentName = "Alto Sax II"
-  shortInstrumentName = "ASx. II"
-  midiInstrument = "alto sax"
-} \scoreAAltoSaxII
+} \scoreAAltoSax
 
 scoreABassClarinetPart = \new Staff \with {
   instrumentName = "Bass clarinet"
@@ -315,8 +320,7 @@ scoreATubularBellsPart = \new Staff \with {
     \scoreAOboePart
     \scoreAClarinetIPart
     \scoreAClarinetIIPart
-    \scoreAAltoSaxIPart
-    \scoreAAltoSaxIIPart
+    \scoreAAltoSaxPart
     \scoreABassClarinetPart
     \scoreATrumpetBbIPart
     \scoreATrumpetBbIIPart
