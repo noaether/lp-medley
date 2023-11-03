@@ -1,0 +1,16 @@
+name: Engrave Music
+
+on:
+  push:
+    branches: [ "main" ]
+    paths: '**.ly'
+  pull_request:
+    branches: [ "main" ]
+    paths: '**.ly'
+
+jobs:
+  build:
+    uses: VinLudens/lilypond-reusable-workflows/.github/workflows/compile-lilypond.yml@main
+    with:
+      LILYPOND_VERSION: 2.24.2
+      MAIN_FILE: main.ly
