@@ -11,7 +11,7 @@ jobs:
           submodules: recursive
       - run: wget -O lilypond.tar.gz https://gitlab.com/lilypond/lilypond/-/releases/v2.24.2/downloads/lilypond-2.24.2-linux-x86_64.tar.gz
       - run: tar xzf lilypond.tar.gz
-      - run: ./lilypond-2.24.2/bin/lilypond -I openlilylib -dno-point-and-click main.ly
+      - run: ./lilypond-2.24.2/bin/lilypond -I openlilylib -dno-point-and-click medley.ly
       - uses: actions/upload-artifact@v3
         with:
           name: Lilypond Output
