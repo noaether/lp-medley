@@ -94,7 +94,7 @@ scoreABassClarinet = \relative c' {
   \numericTimeSignature
   \time 4/4
   \tempo "Adante"
-  % Music follows here.
+  % TODO : move notes to file
   c2 e2 g2 e2 a,1 g1
 
   \section
