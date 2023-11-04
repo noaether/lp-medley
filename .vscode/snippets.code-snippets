@@ -1,0 +1,76 @@
+{
+	// Place your lp-medley workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"book": {
+		"scope": "lilypond",
+		"prefix": "book_",
+		/*
+		\book {
+  \bookOutputName "$1"
+  \header {
+    title = "Medley 2019-2024"
+    composer = "Noa St-Onge"
+    arranger = "Robin Stinat-Vincent"
+    copyright = "2023"
+    instrument = "$1"
+    tagline = ##f
+  }
+  \score {
+    <<
+      \scoreA$2Part
+    >>
+    \layout {
+      indent = 25
+      short-indent = 20
+    }
+
+    \midi {
+      \tempo 4=92
+    }
+  }
+}
+		*/
+		"body": [
+			"\\book {",
+			"  \\bookOutputName \"$1\"",
+			"  \\header {",
+			"    title = \"Medley 2019-2024\"",
+			"    composer = \"Noa St-Onge\"",
+			"    arranger = \"Robin Stinat-Vincent\"",
+			"    copyright = \"2023\"",
+			"    instrument = \"$1\"",
+			"    tagline = ##f",
+			"  }",
+			"  \\score {",
+			"    <<",
+			"      \\scoreA$2Part",
+			"    >>",
+			"    \\layout {",
+			"      indent = 25",
+			"      short-indent = 20",
+			"    }",
+			"",
+			"    \\midi {",
+			"      \\tempo 4=92",
+			"    }",
+			"  }",
+			"}"
+		],
+		"description": "Book"
+	}
+
+}
