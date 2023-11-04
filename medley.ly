@@ -93,7 +93,6 @@ scoreAHornFII = \relative c'' {
 }
 
 scoreATromboneI = \relative c {
-  \transposition f
   \clef bass \key f \major
   \numericTimeSignature
   \time 4/4
@@ -104,7 +103,6 @@ scoreATromboneI = \relative c {
 }
 
 scoreATromboneII = \relative c {
-  \transposition f
   \clef bass \key f \major
   \numericTimeSignature
   \time 4/4
