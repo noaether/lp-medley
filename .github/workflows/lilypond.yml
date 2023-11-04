@@ -24,19 +24,6 @@ jobs:
           path: |
             *.pdf
             *.midi
-      - name: Upload to Netlify
-        # You may pin to the exact commit or the version.
-        # uses: MrFlynn/upload-to-netlify-action@9728d607b0282b7ed2e47067e1291d1918ea552b
-        uses: MrFlynn/upload-to-netlify-action@v3
-        with:
-         # File in the repository to upload.
-         source-file: ChefScore.midi
-         # Target path on the Netlify site to upload the file.
-         destination-path: files/ChefScore.midi
-         # Name of the site to upload the file to.
-         site-name: noaether-cdn
-         # Token used for API access to your Netlify account.
-         netlify-token: ${{ secrets.NETLIFY_TOKEN }}
       - name: Compress PDFs
         run: gs -q -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=FullScore.pdf *.pdf
       - name: Upload to Netlify
@@ -45,9 +32,15 @@ jobs:
         uses: MrFlynn/upload-to-netlify-action@v3
         with:
          # File in the repository to upload.
-         source-file: FullScore.pdf
+         source-file: |
+           FullScore.pdf
+           ChefScore.pdf
+           ChefScore.midi
          # Target path on the Netlify site to upload the file.
-         destination-path: files/FullScore.pdf
+         destination-path: |
+           files/FullScore.pdf
+           files/ChefScore.pdf
+           files/ChefScore.midi
          # Name of the site to upload the file to.
          site-name: noaether-cdn
          # Token used for API access to your Netlify account.
