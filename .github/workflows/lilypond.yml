@@ -24,8 +24,6 @@ jobs:
           path: |
             *.pdf
             *.midi
-      - name: Compress PDFs
-        run: gs -q -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=FullScore.pdf *.pdf
       - name: Upload to Netlify
         # You may pin to the exact commit or the version.
         # uses: MrFlynn/upload-to-netlify-action@9728d607b0282b7ed2e47067e1291d1918ea552b
@@ -39,6 +37,8 @@ jobs:
          site-name: noaether-cdn
          # Token used for API access to your Netlify account.
          netlify-token: ${{ secrets.NETLIFY_TOKEN }}
+      - name: Compress PDFs
+        run: gs -q -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=FullScore.pdf *.pdf
       - name: Upload to Netlify
         # You may pin to the exact commit or the version.
         # uses: MrFlynn/upload-to-netlify-action@9728d607b0282b7ed2e47067e1291d1918ea552b
