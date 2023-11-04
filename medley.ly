@@ -1,7 +1,5 @@
 \version "2.24.2"
 
-\include "components/header.ly"
-
 %woodwinds
 \include "parts/flute.ly"
 \include "parts/oboe.ly"
@@ -13,8 +11,6 @@
 \include "parts/trumpet.ly"
 \include "parts/horn.ly"
 \include "parts/trombone.ly"
-
-\headerSnippet
 
 #(set-global-staff-size 20)
 
@@ -28,58 +24,6 @@ global = {
 scoreAChordNames = \chordmode {
   \global
   % Chords follow here.
-}
-
-scoreAFluteI = \relative c'' {
-  \key bes \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Adante"
-  \fluteI_COTNT
-
-  \section
-}
-
-scoreAFluteII = \relative c'' {
-  \key bes \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Adante"
-  \fluteII_COTNT
-
-  \section
-}
-
-scoreAOboe = \relative c'' {
-  \key bes \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Adante"
-  \oboe_COTNT
-
-  \section
-}
-
-scoreAClarinetI = \relative c'' {
-  \transposition bes
-  \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Adante"
-  \clarI_COTNT
-
-  \section
-}
-
-scoreAClarinetII = \relative c'' {
-  \transposition bes
-  \key c \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Adante"
-  \clarII_COTNT
-
-  \section
 }
 
 scoreAAltoSax = \relative c'' {
@@ -213,36 +157,6 @@ scoreATubularBells = \relative c'' {
 
 scoreAChordsPart = \new ChordNames \scoreAChordNames
 
-scoreAFluteIPart = \new Staff \with {
-  instrumentName = "Flute I"
-  shortInstrumentName = "Fl. I"
-  midiInstrument = "flute"
-} \scoreAFluteI
-
-scoreAFluteIIPart = \new Staff \with {
-  instrumentName = "Flute II"
-  shortInstrumentName = "Fl. II"
-  midiInstrument = "flute"
-} \scoreAFluteII
-
-scoreAOboePart = \new Staff \with {
-  instrumentName = "Oboe"
-  shortInstrumentName = "Ob."
-  midiInstrument = "oboe"
-} \scoreAOboe
-
-scoreAClarinetIPart = \new Staff \with {
-  instrumentName = "Clarinet I"
-  shortInstrumentName = "Cl. I"
-  midiInstrument = "clarinet"
-} \scoreAClarinetI
-
-scoreAClarinetIIPart = \new Staff \with {
-  instrumentName = "Clarinet II"
-  shortInstrumentName = "Cl. II"
-  midiInstrument = "clarinet"
-} \scoreAClarinetII
-
 scoreAAltoSaxPart = \new Staff \with {
   instrumentName = "Alto Sax"
   shortInstrumentName = "ASx."
@@ -339,36 +253,48 @@ scoreATubularBellsPart = \new Staff \with {
   midiInstrument = "tubular bells"
 } \scoreATubularBells
 
-\score {
-  <<
-    \scoreAChordsPart
-    \scoreAFluteIPart
-    \scoreAFluteIIPart
-    \scoreAOboePart
-    \scoreAClarinetIPart
-    \scoreAClarinetIIPart
-    \scoreAAltoSaxPart
-    \scoreABassClarinetPart
-    \scoreATrumpetBbIPart
-    \scoreATrumpetBbIIPart
-    \scoreAHornFIPart
-    \scoreAHornFIIPart
-    \scoreATromboneIPart
-    \scoreATromboneIIPart
-    \scoreAEuphoniumIPart
-    \scoreAEuphoniumIIPart
-    \scoreATubaPart
-    \scoreATimpaniPart
-    \scoreAXylophonePart
-    \scoreAMarimbaPart
-    \scoreATubularBellsPart
-  >>
-  \layout {
-    indent = 25
-    short-indent = 20
+\book {
+  \bookOutputName "ChefScore"
+  \header {
+    dedication = "À Mme Lemay, Mme Cantin et tout le personnel enseignant"
+    title = "Medley 2019-2024"
+    composer = "Noa St-Onge"
+    arranger = "Robin Stinat-Vincent"
+    copyright = "2023"
+    % Remove default LilyPond tagline
+    tagline = ##f
   }
+  \score {
+    <<
+      \scoreAChordsPart
+      \scoreAFluteIPart
+      \scoreAFluteIIPart
+      \scoreAOboePart
+      \scoreAClarinetIPart
+      \scoreAClarinetIIPart
+      \scoreAAltoSaxPart
+      \scoreABassClarinetPart
+      \scoreATrumpetBbIPart
+      \scoreATrumpetBbIIPart
+      \scoreAHornFIPart
+      \scoreAHornFIIPart
+      \scoreATromboneIPart
+      \scoreATromboneIIPart
+      \scoreAEuphoniumIPart
+      \scoreAEuphoniumIIPart
+      \scoreATubaPart
+      \scoreATimpaniPart
+      \scoreAXylophonePart
+      \scoreAMarimbaPart
+      \scoreATubularBellsPart
+    >>
+    \layout {
+      indent = 25
+      short-indent = 20
+    }
 
-  \midi {
-    \tempo 4=92
+    \midi {
+      \tempo 4=92
+    }
   }
 }

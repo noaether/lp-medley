@@ -1,3 +1,5 @@
+\include "../components/text.ly"
+
 hornI_COTNT = {
   r1
   r1
@@ -8,12 +10,15 @@ hornI_COTNT = {
 hornII_COTNT = {
   r1
   r1
-  << %measure3
-    {a2 a4 a4} \\
-    {f2 f4 f4}
-  >>
-  << %measure5
-    {a2 (g2)} \\
-    {c,1}
+  <<
+    {
+      a2_\divisiSnippet a4 a4
+      a2 (g2)
+    } \\
+    {
+      \stemUp
+      f2 f4 f4
+      c1
+    }
   >>
 }

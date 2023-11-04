@@ -1,0 +1,1 @@
+divisiSnippet = \finger \markup \text "div."

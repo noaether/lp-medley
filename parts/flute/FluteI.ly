@@ -1,39 +1,39 @@
-oboe_COTNT = \relative c'' {
+fluteI_COTNT = \relative c'' {
   r1
   r2 r4 bes16 (c16 d16 es16)
   g4 g4 f4 d4
   c2 (c2)
 }
 
-scoreAOboe = \relative c'' {
+scoreAFluteI = \relative c'' {
   \key bes \major
   \numericTimeSignature
   \time 4/4
   \tempo "Adante"
-  \oboe_COTNT
+  \fluteI_COTNT
 
   \section
 }
 
-scoreAOboePart = \new Staff \with {
-  instrumentName = "Oboe"
-  shortInstrumentName = "Ob."
-  midiInstrument = "oboe"
-} \scoreAOboe
+scoreAFluteIPart = \new Staff \with {
+  instrumentName = "Flute I"
+  shortInstrumentName = "Fl. I"
+  midiInstrument = "flute"
+} \scoreAFluteI
 
 \book {
-  \bookOutputName "Oboe"
+  \bookOutputName "FluteI"
   \header {
     title = "Medley 2019-2024"
     composer = "Noa St-Onge"
     arranger = "Robin Stinat-Vincent"
     copyright = "2023"
-    instrument = "Oboe"
+    instrument = "Flute I"
     tagline = ##f
   }
   \score {
     <<
-      \scoreAOboePart
+      \scoreAFluteIPart
     >>
     \layout {
       indent = 25
