@@ -22,7 +22,7 @@ scoreAFluteIPart = \new Staff \with {
 } \scoreAFluteI
 
 \book {
-  \bookOutputName "FluteI"
+  \bookOutputName "Flute I"
   \header {
     title = "Medley 2019-2024"
     composer = "Noa St-Onge"

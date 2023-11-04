@@ -32,7 +32,7 @@ scoreAClarinetIPart = \new Staff \with {
 } \scoreAClarinetI
 
 \book {
-  \bookOutputName "ClarinetI"
+  \bookOutputName "Clarinet I"
   \header {
     title = "Medley 2019-2024"
     composer = "Noa St-Onge"
