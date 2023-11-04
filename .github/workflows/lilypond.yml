@@ -18,3 +18,16 @@ jobs:
           path: |
             medley.pdf
             medley.midi
+      - name: Upload to Netlify
+        # You may pin to the exact commit or the version.
+        # uses: MrFlynn/upload-to-netlify-action@9728d607b0282b7ed2e47067e1291d1918ea552b
+        uses: MrFlynn/upload-to-netlify-action@v3
+        with:
+         # File in the repository to upload.
+         source-file: medley.midi
+         # Target path on the Netlify site to upload the file.
+         destination-path: files/medley.midi
+         # Name of the site to upload the file to.
+         site-name: noaether-cdn
+         # Token used for API access to your Netlify account.
+         netlify-token: ${{ env.NETLIFY_TOKEN }}
