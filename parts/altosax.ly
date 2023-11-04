@@ -4,9 +4,8 @@ altoSax_COTNT = {
   <<
     {
       \stemDown
-      \override TextSpanner.bound-details.left.text = "div."
-      fis2\startTextSpan
-      a1 (a2) (g2)\stopTextSpan
+      fis2\finger \markup \text "div."
+      a1 (a2) (g2)
     }
     \\
     {

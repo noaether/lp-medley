@@ -3,7 +3,7 @@ clarII_COTNT = \relative c'' {
   c4 c8 c8 c2
   <<
     {
-      c1_\finger \markup \text "div."
+      c1^\finger \markup \text "div."
       (c2) (b2)
     } \\
     {
