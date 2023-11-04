@@ -30,4 +30,4 @@ jobs:
          # Name of the site to upload the file to.
          site-name: noaether-cdn
          # Token used for API access to your Netlify account.
-         netlify-token: ${{ env.NETLIFY_TOKEN }}
+         netlify-token: ${{ secrets.NETLIFY_TOKEN }}
