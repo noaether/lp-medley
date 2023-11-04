@@ -70,28 +70,6 @@ scoreATrumpetBbII = \relative c' {
   \section
 }
 
-scoreAHornFI = \relative c'' {
-  \transposition f
-  \key f \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Adante"
-  \hornI_COTNT
-
-  \section
-}
-
-scoreAHornFII = \relative c'' {
-  \transposition f
-  \key f \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Adante"
-  \hornII_COTNT
-
-  \section
-}
-
 scoreATromboneI = \relative c {
   \clef bass \key f \major
   \numericTimeSignature
@@ -178,18 +156,6 @@ scoreATrumpetBbIIPart = \new Staff \with {
   shortInstrumentName = "Tr.Bb. II"
   midiInstrument = "trumpet"
 } \scoreATrumpetBbII
-
-scoreAHornFIPart = \new Staff \with {
-  instrumentName = "Horn in F I"
-  shortInstrumentName = "Hn.F. I"
-  midiInstrument = "french horn"
-} \scoreAHornFI
-
-scoreAHornFIIPart = \new Staff \with {
-  instrumentName = "Horn in F II"
-  shortInstrumentName = "Hn.F. II"
-  midiInstrument = "french horn"
-} \scoreAHornFII
 
 scoreATromboneIPart = \new Staff \with {
   instrumentName = "Trombone I"
