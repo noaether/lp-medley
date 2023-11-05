@@ -9,7 +9,7 @@ hornII_COTNT = {
     {
       \stemUp
       f2 f4 f4
-      c1
+      c2 (c2)
     }
   >>
 }

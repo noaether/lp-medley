@@ -10,7 +10,8 @@ altoSax_COTNT = {
     \\
     {
       fis,2
-      \stemUp e2 (g2) (fis1)
+      \stemUp e2 (g2)
+      (fis2) (fis2)
     }
   >>
 }
