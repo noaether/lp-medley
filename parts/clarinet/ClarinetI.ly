@@ -8,7 +8,7 @@ clarI_COTNT = \relative c'' {
     } \\
     {
       a1
-      (b1)
+      (b2) (b2)
     }
   >>
 }

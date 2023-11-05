@@ -7,8 +7,8 @@ clarII_COTNT = \relative c'' {
       (c2) (b2)
     } \\
     {
-      f2
-      (g2) (g1)
+      f2 (g2)
+      (g2) (g2)
     }
   >>
 }
