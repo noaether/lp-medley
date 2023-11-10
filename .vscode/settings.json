@@ -1,0 +1,5 @@
+{
+  "vslilypond.compilation.pathToMainCompilationFile": "medley.ly",
+  "vslilypond.general.pathToLilypond": "C:\\Users\\noast\\OneDrive\\Documents\\lilypond-2.24.2\\bin\\lilypond.exe",
+  "vslilypond.compilation.additionalCommandLineArguments": "--output output/"
+}
