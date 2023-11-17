@@ -5,7 +5,7 @@
 \include "parts/oboe.ly"
 \include "parts/clarinet.ly"
 \include "parts/bassclarinet.ly"
-\include "parts/altosax.ly"
+\include "parts/alto/altosax.ly"
 
 %brass
 \include "parts/trumpet.ly"
@@ -23,18 +23,6 @@ global = {
 
 scoreAChordNames = \chordmode {
   \global
-  % Chords follow here.
-}
-
-scoreAAltoSax = \relative c'' {
-  \transposition es
-  \key g \major
-  \numericTimeSignature
-  \time 4/4
-  \tempo "Adante"
-  \altoSax_COTNT
-
-  \section
 }
 
 scoreABassClarinet = \relative c' {
@@ -133,12 +121,6 @@ scoreATubularBells = \relative c'' {
 
 scoreAChordsPart = \new ChordNames \scoreAChordNames
 
-scoreAAltoSaxPart = \new Staff \with {
-  instrumentName = "Alto Sax"
-  shortInstrumentName = "ASx."
-  midiInstrument = "alto sax"
-} \scoreAAltoSax
-
 scoreABassClarinetPart = \new Staff \with {
   instrumentName = "Bass clarinet"
   shortInstrumentName = "BCl."
@@ -220,7 +202,6 @@ scoreATubularBellsPart = \new Staff \with {
 \book {
   \bookOutputName "ChefScore"
   \header {
-    dedication = "À Mme Lemay, Mme Cantin et tout le personnel enseignant"
     title = "Medley 2019-2024"
     composer = "Noa St-Onge"
     arranger = "Robin Stinat-Vincent"
